@@ -25,7 +25,7 @@ Ticketing System adalah aplikasi berbasis web yang digunakan untuk mengelola tik
 ## 🛠️ How to Use
 1. **Clone repository**
    ```sh
-   git clone https://github.com/whooisbb/ticketing_demo.git
+   git clone https://github.com/whooisbb/ujikom_demo.git
    ```
 2. **Copy file `.env.example` menjadi `.env` dan edit kredensial database**
    ```sh
