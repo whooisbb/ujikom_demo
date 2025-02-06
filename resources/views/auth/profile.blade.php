@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        {{ __('My profile') }}
+        {{ __(' Profile') }}
     </x-slot>
 
     @if ($message = Session::get('success'))
@@ -48,28 +48,35 @@
                          required/>
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
-
             <div class="mt-4">
-                <x-input-label for="password" :value="__('New password')"/>
-                <x-text-input type="password"
-                         name="password"
-                         class="block w-full" />
-                <x-input-error :messages="$errors->get('password')" class="mt-2" />
-            </div>
+    <x-input-label for="password" :value="__('New password')"/>
+    <x-text-input type="password"
+             name="password"
+             class="block w-full" />
+    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+</div>
 
-            <div class="mt-4">
-                <x-input-label id="password_confirmation" :value="__('New password confirmation')"/>
-                <x-text-input type="password"
-                         name="password_confirmation"
-                         class="block w-full" />
-            </div>
+<div class="mt-4">
+    <x-input-label id="password_confirmation" :value="__('New password confirmation')"/>
+    <x-text-input type="password"
+             name="password_confirmation"
+             class="block w-full" />
+</div>
 
-            <div class="mt-4">
-                <x-primary-button class="block w-full">
-                    {{ __('Submit') }}
-                </x-primary-button>
-            </div>
-        </form>
+<div class="mt-4">
+    <x-input-label for="photo" :value="__('Profile Photo')"/>
+    <x-text-input type="file"
+             name="photo"
+             class="block w-full" />
+    <x-input-error :messages="$errors->get('photo')" class="mt-2" />
+</div>
+
+<div class="mt-4">
+    <x-primary-button class="block w-full">
+        {{ __('Submit') }}
+    </x-primary-button>
+</div>
+</form>
 
     </div>
 </x-app-layout>
